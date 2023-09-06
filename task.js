@@ -17,21 +17,24 @@ console.log(daysPerbook(10))
 
 
 function daysToWeeks (days) {
-    let weeks = days / 7
-    let output = `${days} dienos yra ${weeks} savaitės.`
+    let weeks = Math.floor(days / 7)
+    let remainingdays = days % 7
+    let output = `${days} dienos yra ${weeks} savaitės ir ${remainingdays} diena.`
+
     return output
 }
 
-console.log(daysToWeeks(14))
+console.log(daysToWeeks(18))
 
 
 function daysToYears(days) {
-    let years = Math.round(days / 365)
-    let output = `${days} dienos yra ${years} metai.`
+    let years = Math.floor(days / 365)
+    let remainingdays = days % 365
+    let output = `${days} dienos yra ${years} metai ir ${remainingdays} dienos.`
     return output
 }
 
-console.log(daysToYears(365))
+console.log(daysToYears(390))
 
 
 function yearsToHours(years) {
